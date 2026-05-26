@@ -7,22 +7,21 @@
     <meta name="description" content="Portfolio profesional de Mario Tiburcio - Especialista en Ventas de Llamada Fría (Cold Calling) y Quant Trader consistente en cuentas de fondeo de $200k." />
     <meta name="keywords" content="Mario Tiburcio, Cold Calling, Ventas, Quant Trader, Trading, Forex, Crypto, Python, PineScript, Hustlers University, Renosur Energías" />
     <meta name="author" content="Mario Tiburcio" />
-    <title>Mario Tiburcio | Cold Calling Salesman & Quant Trader</title>
+    <title>Mario Tiburcio | Sales & Quant Trader Dashboard</title>
     
-    <!-- Google Fonts: Cinzel para títulos elegantes, Plus Jakarta Sans para el cuerpo -->
+    <!-- Google Fonts: Inter y Plus Jakarta Sans para un look 100% tecnológico/SaaS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Cursor Personalizado -->
-    <div id="custom-cursor" class="custom-cursor"></div>
-    <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
-
-    <!-- Header / Navegación Premium -->
+    <!-- Header / Navegación SaaS (Estilo Vercel/Dub.co) -->
     <header class="header">
       <div class="header-container">
-        <a href="#" class="logo" id="nav-logo">MT.</a>
+        <a href="#" class="logo-link">
+          <span class="logo-symbol">✦</span>
+          <span class="logo-text">mario.tiburcio</span>
+        </a>
         <nav class="nav">
           <a href="#about" class="nav-link" id="link-about" data-i18n="nav-about">Sobre Mí</a>
           <a href="#sales" class="nav-link" id="link-sales" data-i18n="nav-sales">Ventas</a>
@@ -32,71 +31,98 @@
           <a href="#contact" class="nav-link" id="link-contact" data-i18n="nav-contact">Contacto</a>
         </nav>
         <div class="header-right">
-          <!-- Selector de Idioma -->
+          <!-- Selector de Idioma Estilo Pill -->
           <div class="lang-switcher">
             <button class="lang-btn active" id="btn-lang-es">ES</button>
-            <span class="lang-divider">/</span>
             <button class="lang-btn" id="btn-lang-en">EN</button>
           </div>
           <div class="header-cta">
-            <a href="#contact" class="btn-gold-outline btn-sm" id="header-cta-btn" data-i18n="nav-cta">Negociar Ahora</a>
+            <a href="#contact" class="btn-primary btn-sm" id="header-cta-btn" data-i18n="nav-cta">Negociar Ahora</a>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Hero Section -->
+      <!-- Hero Section (Estilo Oryzo / Dub.co con luces desenfocadas de fondo) -->
       <section id="about" class="hero-section">
         <div class="background-glows">
-          <div class="glow glow-1"></div>
-          <div class="glow glow-2"></div>
+          <div class="glow glow-blue"></div>
+          <div class="glow glow-purple"></div>
         </div>
         <div class="container hero-container">
           <div class="hero-content">
-            <span class="hero-badge" data-i18n="hero-badge">Disponible para nuevos desafíos</span>
-            <h1 class="hero-title" id="hero-main-title">Mario Tiburcio</h1>
-            <h2 class="hero-subtitle"><span id="typewriter"></span><span class="cursor-type">&nbsp;</span></h2>
+            <div class="hero-badge-container">
+              <span class="hero-badge">
+                <span class="badge-dot"></span>
+                <span data-i18n="hero-badge">Disponible para nuevos desafíos</span>
+              </span>
+            </div>
+            <h1 class="hero-title">Mario Tiburcio</h1>
+            <h2 class="hero-subtitle">
+              <span id="typewriter"></span><span class="cursor-type">|</span>
+            </h2>
             <p class="hero-pitch" data-i18n="hero-pitch">
               Apasionado por los mercados financieros y experto en el desarrollo de relaciones comerciales de alto valor. Conecto de forma instantánea a través de llamada en frío e implemento algoritmos cuantitativos con gestión de riesgo estricta.
             </p>
             <div class="hero-actions">
-              <a href="#sales" class="btn-gold" id="hero-btn-sales" data-i18n="hero-cta-view">Ver Trayectoria</a>
-              <a href="#contact" class="btn-text" id="hero-btn-contact"><span data-i18n="hero-cta-contact">Contáctame</span> <span class="arrow">→</span></a>
+              <a href="#sales" class="btn-primary" id="hero-btn-sales" data-i18n="hero-cta-view">Ver Trayectoria</a>
+              <a href="#contact" class="btn-secondary" id="hero-btn-contact" data-i18n="hero-cta-contact">Contáctame</a>
             </div>
           </div>
           <div class="hero-visual">
-            <div class="avatar-wrapper" id="avatar-interactive-wrapper">
-              <div class="avatar-ring-outer"></div>
-              <div class="avatar-ring-inner"></div>
-              <img src="/avatar.jpg" alt="Mario Tiburcio" class="avatar-img" id="avatar-main-image" />
+            <div class="avatar-container" id="avatar-interactive-wrapper">
+              <div class="avatar-card">
+                <img src="/avatar.jpg" alt="Mario Tiburcio" class="avatar-img" id="avatar-main-image" />
+                <div class="avatar-overlay"></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Dashboard de Métricas -->
+      <!-- Dashboard de Métricas (Estilo Dub.co Analytics Widgets) -->
       <section class="metrics-section">
         <div class="container grid-4">
           <div class="metric-card scroll-reveal" id="metric-sales-years">
-            <div class="metric-num-wrapper"><span class="metric-number" data-target="3">0</span><span class="metric-plus">+</span></div>
-            <p class="metric-label" data-i18n="metric-sales-label">Años en Ventas</p>
-            <span class="metric-desc" data-i18n="metric-sales-desc">Especialidad en Cold Calling</span>
+            <div class="metric-header">
+              <span class="metric-title" data-i18n="metric-sales-label">Años en Ventas</span>
+              <span class="metric-trend green">+3y</span>
+            </div>
+            <div class="metric-value-wrapper">
+              <span class="metric-number" data-target="3">0</span><span class="metric-suffix">+</span>
+            </div>
+            <p class="metric-desc" data-i18n="metric-sales-desc">Especialidad en Cold Calling</p>
           </div>
           <div class="metric-card scroll-reveal" id="metric-clients">
-            <div class="metric-num-wrapper"><span class="metric-number" data-target="400">0</span><span class="metric-plus">+</span></div>
-            <p class="metric-label" data-i18n="metric-clients-label">Clientes Particulares</p>
-            <span class="metric-desc" data-i18n="metric-clients-desc">Cartera activa y fidelizada</span>
+            <div class="metric-header">
+              <span class="metric-title" data-i18n="metric-clients-label">Clientes Particulares</span>
+              <span class="metric-trend green">+400</span>
+            </div>
+            <div class="metric-value-wrapper">
+              <span class="metric-number" data-target="400">0</span><span class="metric-suffix">+</span>
+            </div>
+            <p class="metric-desc" data-i18n="metric-clients-desc">Cartera activa y fidelizada</p>
           </div>
           <div class="metric-card scroll-reveal" id="metric-funding">
-            <div class="metric-num-wrapper"><span class="metric-plus">$</span><span class="metric-number" data-target="200">0</span><span class="metric-plus">k</span></div>
-            <p class="metric-label" data-i18n="metric-funding-label">Cuentas de Fondeo</p>
-            <span class="metric-desc" data-i18n="metric-funding-desc">Consistencia de más de 1 año</span>
+            <div class="metric-header">
+              <span class="metric-title" data-i18n="metric-funding-label">Cuentas de Fondeo</span>
+              <span class="metric-trend blue">Active</span>
+            </div>
+            <div class="metric-value-wrapper">
+              <span class="metric-symbol">$</span><span class="metric-number" data-target="200">0</span><span class="metric-suffix">k</span>
+            </div>
+            <p class="metric-desc" data-i18n="metric-funding-desc">Consistencia de más de 1 año</p>
           </div>
           <div class="metric-card scroll-reveal" id="metric-winrate">
-            <div class="metric-num-wrapper"><span class="metric-number" data-target="100">0</span><span class="metric-plus">%</span></div>
-            <p class="metric-label" data-i18n="metric-risk-label">Gestión de Riesgo</p>
-            <span class="metric-desc" data-i18n="metric-risk-desc">Consistencia matemática estricta</span>
+            <div class="metric-header">
+              <span class="metric-title" data-i18n="metric-risk-label">Gestión de Riesgo</span>
+              <span class="metric-trend green">100%</span>
+            </div>
+            <div class="metric-value-wrapper">
+              <span class="metric-number" data-target="100">0</span><span class="metric-suffix">%</span>
+            </div>
+            <p class="metric-desc" data-i18n="metric-risk-desc">Consistencia matemática estricta</p>
           </div>
         </div>
       </section>
@@ -110,24 +136,33 @@
             <p class="section-description" data-i18n="sales-description">
               La llamada en frío es el canal definitivo para generar negocios rápidos y de gran volumen. Con <strong>3 años de experiencia comercial</strong>, he dominado la oratoria comercial y el cierre directo, desarrollando estrategias que superan la barrera del "no" de inmediato.
             </p>
-            <div class="experience-box">
-              <h3 class="exp-title">Comercial | Renosur Energías SL</h3>
-              <span class="exp-date" data-i18n="sales-exp1-date">Desde hace 2 años</span>
-              <p class="exp-text" data-i18n="sales-exp1-text">Generación de nuevas cuentas comerciales e incremento sostenido de la facturación en el sector energético, liderando la prospección telefónica activa.</p>
-            </div>
-            <div class="experience-box">
-              <h3 class="exp-title" data-i18n="sales-exp2-title">Gestor de Cuentas Particulares</h3>
-              <span class="exp-date" data-i18n="sales-exp2-date">3 años de trayectoria acumulada</span>
-              <p class="exp-text" data-i18n="sales-exp2-text">Captación y fidelización de una cartera de <strong>más de 400 clientes particulares</strong> a nivel nacional mediante venta telefónica y consultiva.</p>
+            
+            <div class="experience-list">
+              <div class="experience-item">
+                <div class="exp-icon">💼</div>
+                <div>
+                  <h3 class="exp-title">Comercial | Renosur Energías SL</h3>
+                  <span class="exp-date" data-i18n="sales-exp1-date">Desde hace 2 años</span>
+                  <p class="exp-text" data-i18n="sales-exp1-text">Generación de nuevas cuentas comerciales e incremento sostenido de la facturación en el sector energético, liderando la prospección telefónica activa.</p>
+                </div>
+              </div>
+              <div class="experience-item">
+                <div class="exp-icon">👤</div>
+                <div>
+                  <h3 class="exp-title" data-i18n="sales-exp2-title">Gestor de Cuentas Particulares</h3>
+                  <span class="exp-date" data-i18n="sales-exp2-date">3 años de trayectoria acumulada</span>
+                  <p class="exp-text" data-i18n="sales-exp2-text">Captación y fidelización de una cartera de <strong>más de 400 clientes particulares</strong> a nivel nacional mediante venta telefónica y consultiva.</p>
+                </div>
+              </div>
             </div>
           </div>
           
-          <!-- Simulador Interactivo de Objeciones -->
+          <!-- Simulador de Objeciones (Estilo Chat App Moderna / Peec.ai Widget) -->
           <div class="sales-visual scroll-reveal-right">
             <div class="simulator-card">
               <div class="simulator-header">
                 <div class="sim-dots"><span></span><span></span><span></span></div>
-                <div class="sim-title">Sales Objection Simulator v1.0</div>
+                <div class="sim-title">Objection Handler Widget</div>
               </div>
               <div class="simulator-body">
                 <p class="sim-instruction" data-i18n="sim-instruction">Pon a prueba mis habilidades de Cold Calling. Selecciona la objeción del cliente:</p>
@@ -137,16 +172,21 @@
                   <button class="btn-obj" data-objection="es-caro" id="btn-obj-caro" data-i18n="sim-obj-3">"En este momento es un gasto muy alto."</button>
                   <button class="btn-obj" data-objection="mandame-mail" id="btn-obj-mail" data-i18n="sim-obj-4">"Mándame un email y lo leo luego."</button>
                 </div>
+                
                 <div class="sim-response-box" id="sim-response-container">
-                  <div class="sim-character">
-                    <div class="sim-avatar">MT</div>
-                    <div>
-                      <h4 class="sim-char-name">Mario Tiburcio</h4>
-                      <span class="sim-char-role" data-i18n="sim-role">Cold Caller Specialist</span>
-                    </div>
+                  <div class="sim-message-bubble user-bubble">
+                    <div class="bubble-avatar">Client</div>
+                    <div class="bubble-content" id="sim-user-text">...</div>
                   </div>
-                  <div class="sim-message" id="sim-response-text" data-i18n="sim-response-placeholder">
-                    Selecciona una objeción de arriba para ver cómo reabro la llamada de inmediato...
+                  
+                  <div class="sim-message-bubble mario-bubble" id="sim-mario-bubble-container">
+                    <div class="bubble-avatar font-tech">MT</div>
+                    <div class="bubble-content">
+                      <span class="bubble-name">Mario Tiburcio <span class="badge-role" data-i18n="sim-role">Cold Caller Specialist</span></span>
+                      <p class="bubble-text" id="sim-response-text" data-i18n="sim-response-placeholder">
+                        Selecciona una objeción de arriba para ver cómo reabro la llamada de inmediato...
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -155,18 +195,22 @@
         </div>
       </section>
 
-      <!-- Sección de Trading -->
+      <!-- Sección de Trading (Estilo Dub.co Analytics Dashboard) -->
       <section id="trading" class="trading-section section-padding">
         <div class="container grid-2 align-center">
-          <!-- Gráfico Interactivo Canvas -->
+          <!-- Gráfico Canvas Estilo Dub.co / Vercel -->
           <div class="trading-visual scroll-reveal-left">
             <div class="chart-card">
               <div class="chart-header">
-                <div class="chart-tabs">
-                  <span class="tab active" id="tab-equity" data-i18n="chart-title">Evolución de Equity ($200k Fondeados)</span>
+                <div class="chart-info">
+                  <span class="chart-title" data-i18n="chart-title">Evolución de Equity ($200k Fondeados)</span>
+                  <div class="chart-stats-mini">
+                    <span class="stat-item"><span class="label">Balance:</span> <span class="val">$234,500</span></span>
+                    <span class="stat-item"><span class="label">Growth:</span> <span class="val green">+17.25%</span></span>
+                  </div>
                 </div>
                 <div class="chart-status">
-                  <span class="pulse-dot"></span> Live Sim
+                  <span class="pulse-dot"></span> Live
                 </div>
               </div>
               <div class="chart-body">
@@ -174,9 +218,9 @@
               </div>
               <div class="chart-footer">
                 <div class="chart-legend-item">
-                  <span class="dot-gold"></span> <span data-i18n="chart-legend">Cuenta Fondeada Consistente</span>
+                  <span class="dot-blue"></span> <span data-i18n="chart-legend">Cuenta Fondeada Consistente</span>
                 </div>
-                <button class="btn-gold-outline btn-xs" id="btn-reset-chart" data-i18n="chart-btn">Simular Historial</button>
+                <button class="btn-secondary btn-xs" id="btn-reset-chart" data-i18n="chart-btn">Simular Historial</button>
               </div>
             </div>
           </div>
@@ -190,21 +234,21 @@
             
             <div class="trading-features">
               <div class="feature-item">
-                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+                <div class="feature-icon">📈</div>
                 <div>
                   <h4 class="feature-title" data-i18n="trading-feat1-title">Consistencia de $200,000 USD</h4>
                   <p class="feature-text" data-i18n="trading-feat1-text">Gestión activa y exitosa de cuentas de fondeo institucionales de $200k con consistencia demostrada durante más de un año.</p>
                 </div>
               </div>
               <div class="feature-item">
-                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                <div class="feature-icon">🤖</div>
                 <div>
                   <h4 class="feature-title" data-i18n="trading-feat2-title">Trading Algorítmico & Scripts</h4>
                   <p class="feature-text" data-i18n="trading-feat2-text">Desarrollo de estrategias automatizadas de intradía y swing en PineScript (TradingView) y bots de control en Python.</p>
                 </div>
               </div>
               <div class="feature-item">
-                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <div class="feature-icon">🛡️</div>
                 <div>
                   <h4 class="feature-title" data-i18n="trading-feat3-title">Gestión de Riesgo Rigurosa</h4>
                   <p class="feature-text" data-i18n="trading-feat3-text">Reglas inquebrantables de drawdown máximo diario e integral, adaptándome dinámicamente a las condiciones del mercado sin depender de ratios rígidos.</p>
@@ -215,7 +259,7 @@
         </div>
       </section>
 
-      <!-- Habilidades -->
+      <!-- Habilidades (SaaS clean metrics list) -->
       <section id="skills" class="skills-section section-padding">
         <div class="container">
           <div class="text-center">
@@ -230,29 +274,39 @@
               <h3 class="skills-col-title" data-i18n="skills-col1-title">Ventas & Negociación</h3>
               <div class="skills-grid">
                 <div class="skill-card" id="skill-cierre">
-                  <h4 class="skill-name" data-i18n="skill-name-cierre">Cierre de Ventas</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-cierre">Cierre de Ventas</span>
+                    <span class="skill-percent">95%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%"></div></div>
-                  <span class="skill-percent">95%</span>
                 </div>
                 <div class="skill-card" id="skill-oratoria">
-                  <h4 class="skill-name" data-i18n="skill-name-oratoria">Oratoria & Comunicación</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-oratoria">Oratoria & Comunicación</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
-                  <span class="skill-percent">90%</span>
                 </div>
                 <div class="skill-card" id="skill-contratos">
-                  <h4 class="skill-name" data-i18n="skill-name-contratos">Negociación de Contratos</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-contratos">Negociación de Contratos</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
-                  <span class="skill-percent">85%</span>
                 </div>
                 <div class="skill-card" id="skill-objeciones">
-                  <h4 class="skill-name" data-i18n="skill-name-objeciones">Manejo de Objeciones</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-objeciones">Manejo de Objeciones</span>
+                    <span class="skill-percent">95%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%"></div></div>
-                  <span class="skill-percent">95%</span>
                 </div>
                 <div class="skill-card" id="skill-psicologia">
-                  <h4 class="skill-name" data-i18n="skill-name-psicologia">Psicología de Mercado/Cliente</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-psicologia">Psicología de Mercado/Cliente</span>
+                    <span class="skill-percent">92%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%"></div></div>
-                  <span class="skill-percent">92%</span>
                 </div>
               </div>
             </div>
@@ -262,35 +316,45 @@
               <h3 class="skills-col-title" data-i18n="skills-col2-title">Trading & Tecnología</h3>
               <div class="skills-grid">
                 <div class="skill-card" id="skill-tecnico">
-                  <h4 class="skill-name" data-i18n="skill-name-tecnico">Análisis Técnico y Macro</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-tecnico">Análisis Técnico y Macro</span>
+                    <span class="skill-percent">90%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
-                  <span class="skill-percent">90%</span>
                 </div>
                 <div class="skill-card" id="skill-riesgo">
-                  <h4 class="skill-name" data-i18n="skill-name-riesgo">Gestión de Riesgo (Risk Management)</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-riesgo">Gestión de Riesgo (Risk Management)</span>
+                    <span class="skill-percent">98%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 98%"></div></div>
-                  <span class="skill-percent">98%</span>
                 </div>
                 <div class="skill-card" id="skill-python">
-                  <h4 class="skill-name" data-i18n="skill-name-python">Python & PineScript</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-python">Python & PineScript</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
-                  <span class="skill-percent">85%</span>
                 </div>
                 <div class="skill-card" id="skill-crm">
-                  <h4 class="skill-name" data-i18n="skill-name-crm">CRM (Salesforce, HubSpot)</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-crm">CRM (Salesforce, HubSpot)</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
-                  <span class="skill-percent">80%</span>
                 </div>
                 <div class="skill-card" id="skill-excel">
-                  <h4 class="skill-name" data-i18n="skill-name-excel">Excel Avanzado & Datos</h4>
+                  <div class="skill-info">
+                    <span class="skill-name" data-i18n="skill-name-excel">Excel Avanzado & Datos</span>
+                    <span class="skill-percent">88%</span>
+                  </div>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%"></div></div>
-                  <span class="skill-percent">88%</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Idiomas -->
+          <!-- Idiomas (Clean badge style) -->
           <div class="languages-box mt-40 scroll-reveal">
             <h4 class="languages-title" data-i18n="lang-box-title">Idiomas</h4>
             <div class="languages-flex">
@@ -298,7 +362,7 @@
                 <span class="lang-name" data-i18n="lang-es-name">Español</span>
                 <span class="lang-level" data-i18n="lang-es-level">Nativo</span>
               </div>
-              <div class="lang-separator">|</div>
+              <div class="lang-separator"></div>
               <div class="lang-item">
                 <span class="lang-name" data-i18n="lang-en-name">Inglés</span>
                 <span class="lang-level" data-i18n="lang-en-level">B2 (Conversación fluida)</span>
@@ -308,7 +372,7 @@
         </div>
       </section>
 
-      <!-- Educación y Certificaciones -->
+      <!-- Educación y Certificaciones (Clean dashboard timelines) -->
       <section id="education" class="education-section section-padding">
         <div class="container">
           <div class="text-center">
@@ -318,9 +382,11 @@
           
           <div class="timeline mt-50">
             <div class="timeline-item scroll-reveal-left" id="edu-trw">
-              <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-badge" data-i18n="edu-badge1">Especialización Financiera</span>
+                <div class="timeline-header">
+                  <span class="timeline-badge" data-i18n="edu-badge1">Especialización Financiera</span>
+                  <span class="timeline-year">HustlersUni</span>
+                </div>
                 <h3 class="timeline-title">CryptoTrading Campus - TRW University</h3>
                 <h4 class="timeline-subtitle" data-i18n="edu-sub1">HustlersUniversity | Nivel Brown Belt</h4>
                 <p class="timeline-desc" data-i18n="edu-desc1">Estudios de nivel avanzado en análisis técnico, gestión de colateral y trading intradía con validación práctica y consistencia de mercado demostrada.</p>
@@ -328,9 +394,11 @@
             </div>
 
             <div class="timeline-item scroll-reveal-right" id="edu-bachillerato">
-              <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-badge" data-i18n="edu-badge2">Educación Secundaria</span>
+                <div class="timeline-header">
+                  <span class="timeline-badge" data-i18n="edu-badge2">Educación Secundaria</span>
+                  <span class="timeline-year">Tech Degree</span>
+                </div>
                 <h3 class="timeline-title" data-i18n="edu-title2">Bachillerato Tecnológico</h3>
                 <p class="timeline-desc" data-i18n="edu-desc2">Formación orientada a ciencias aplicadas, matemáticas avanzadas y fundamentos informáticos, base de mi perfil analítico-cuantitativo actual.</p>
               </div>
@@ -351,7 +419,7 @@
             
             <div class="contact-methods">
               <a href="mailto:mariotiburcioporras@gmail.com" class="contact-method-card" id="contact-mail-card">
-                <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></div>
+                <span class="method-icon">✉</span>
                 <div>
                   <h4 class="method-label" data-i18n="contact-method1-label">Email Directo</h4>
                   <span class="method-val">mariotiburcioporras@gmail.com</span>
@@ -359,7 +427,7 @@
               </a>
               
               <a href="tel:+34639938134" class="contact-method-card" id="contact-phone-card">
-                <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                <span class="method-icon">📞</span>
                 <div>
                   <h4 class="method-label" data-i18n="contact-method2-label">Teléfono</h4>
                   <span class="method-val">+34 639 93 81 34</span>
@@ -367,7 +435,7 @@
               </a>
 
               <a href="https://github.com/fxmariotp" target="_blank" class="contact-method-card" id="contact-github-card">
-                <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></div>
+                <span class="method-icon">🐙</span>
                 <div>
                   <h4 class="method-label">GitHub</h4>
                   <span class="method-val">github.com/fxmariotp</span>
@@ -395,7 +463,7 @@
                 <label for="form-message" class="form-label" data-i18n="form-label-msg">Mensaje</label>
                 <textarea id="form-message" class="form-control" rows="5" data-i18n-placeholder="form-placeholder-msg" placeholder="Cuéntame brevemente tu proyecto o propuesta..." required></textarea>
               </div>
-              <button type="submit" class="btn-gold w-100" id="form-submit-btn" data-i18n="form-btn">Enviar Mensaje</button>
+              <button type="submit" class="btn-primary w-100" id="form-submit-btn" data-i18n="form-btn">Enviar Mensaje</button>
             </form>
           </div>
         </div>
@@ -405,7 +473,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container text-center">
-        <p class="footer-copy" data-i18n="footer-copy">&copy; 2026 Mario Tiburcio. Todos los derechos reservados. Diseñado bajo el estándar Gold & Minimalist.</p>
+        <p class="footer-copy" data-i18n="footer-copy">&copy; 2026 Mario Tiburcio. Todos los derechos reservados. Diseñado bajo el estándar de tecnología minimalista.</p>
       </div>
     </footer>
 

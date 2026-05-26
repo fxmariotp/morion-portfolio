@@ -10,6 +10,21 @@ const typewriterWords = {
   en: ['Cold Calling Salesman', 'Quantitative Trader', 'B2B Sales Specialist']
 };
 
+const userObjections = {
+  es: {
+    'no-tiempo': '"No tengo tiempo para esto ahora."',
+    'ya-tengo': '"Ya tengo contratado un servicio similar."',
+    'es-caro': '"En este momento es un gasto muy alto."',
+    'mandame-mail': '"Mándame un email y lo leo luego."'
+  },
+  en: {
+    'no-tiempo': '"I don\'t have time for this right now."',
+    'ya-tengo': '"I already have a similar service hired."',
+    'es-caro': '"At the moment it\'s too high an expense."',
+    'mandame-mail': '"Send me an email and I\'ll read it later."'
+  }
+};
+
 const simulatorResponses = {
   es: {
     'no-tiempo': `"Entiendo perfectamente lo ocupado/a que está. Si le llamo es justamente porque sé que su tiempo vale oro. Solo necesito 60 segundos para decirle cómo Renosur Energías SL ayudó a reducir los costes de energía en un 22% a empresas del mismo sector este mes.\n\nSi tras esos 60 segundos ve que no tiene sentido para usted, colgamos. ¿Le parece bien comenzar el cronómetro?"`,
@@ -136,7 +151,7 @@ const translations = {
     'form-btn': 'Enviar Mensaje',
     
     // Footer
-    'footer-copy': '&copy; 2026 Mario Tiburcio. Todos los derechos reservados. Diseñado bajo el estándar Gold & Minimalist.',
+    'footer-copy': '&copy; 2026 Mario Tiburcio. Todos los derechos reservados. Diseñado bajo el estándar de tecnología minimalista.',
     'alert-success': 'Mensaje enviado con éxito. Mario se pondrá en contacto contigo a la brevedad.'
   },
   en: {
@@ -249,7 +264,7 @@ const translations = {
     'form-btn': 'Send Message',
     
     // Footer
-    'footer-copy': '&copy; 2026 Mario Tiburcio. All rights reserved. Designed under the Gold & Minimalist standard.',
+    'footer-copy': '&copy; 2026 Mario Tiburcio. All rights reserved. Designed under the tech minimalist standard.',
     'alert-success': 'Message sent successfully. Mario will get back to you shortly.'
   }
 };
@@ -257,7 +272,6 @@ const translations = {
 // --- CONFIGURACIÓN E INICIALIZACIÓN ---
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageSwitcher();
-  initCustomCursor();
   initTypewriter();
   initMetricsCounter();
   initObjectionSimulator();
@@ -274,7 +288,6 @@ function initLanguageSwitcher() {
   
   if (!btnEs || !btnEn) return;
 
-  // Cargar preferencia del localStorage
   const savedLang = localStorage.getItem('lang') || 'es';
   setLanguage(savedLang);
 
@@ -286,7 +299,6 @@ function setLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('lang', lang);
 
-  // Actualizar botones de idioma activos
   const btnEs = document.getElementById('btn-lang-es');
   const btnEn = document.getElementById('btn-lang-en');
   if (btnEs && btnEn) {
@@ -299,7 +311,6 @@ function setLanguage(lang) {
     }
   }
 
-  // Traducir todos los elementos con [data-i18n]
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
@@ -307,7 +318,6 @@ function setLanguage(lang) {
     }
   });
 
-  // Traducir placeholders
   document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
     const key = el.getAttribute('data-i18n-placeholder');
     if (translations[lang] && translations[lang][key]) {
@@ -315,49 +325,15 @@ function setLanguage(lang) {
     }
   });
 
-  // Traducir la respuesta actual del simulador de objeciones si está activa
+  // Traducir respuestas activas del simulador
   const textElement = document.getElementById('sim-response-text');
+  const userTextElement = document.getElementById('sim-user-text');
   if (textElement && activeObjection) {
     textElement.textContent = simulatorResponses[lang][activeObjection];
   }
-}
-
-// --- CURSOR PERSONALIZADO ---
-function initCustomCursor() {
-  const cursor = document.getElementById('custom-cursor');
-  const dot = document.getElementById('custom-cursor-dot');
-  
-  if (!cursor || !dot) return;
-
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
-    dot.style.left = `${e.clientX}px`;
-    dot.style.top = `${e.clientY}px`;
-  });
-
-  const updateHoverStates = () => {
-    const interactives = document.querySelectorAll('a, button, select, input, textarea, .tab, .btn-obj');
-    interactives.forEach((el) => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
-  };
-  
-  updateHoverStates();
-  
-  // Para que funcione con elementos creados dinámicamente si los hubiera
-  const observer = new MutationObserver(updateHoverStates);
-  observer.observe(document.body, { childList: true, subtree: true });
-
-  document.addEventListener('mousedown', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
-    dot.style.transform = 'translate(-50%, -50%) scale(1.5)';
-  });
-  document.addEventListener('mouseup', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-    dot.style.transform = 'translate(-50%, -50%) scale(1)';
-  });
+  if (userTextElement && activeObjection) {
+    userTextElement.textContent = userObjections[lang][activeObjection];
+  }
 }
 
 // --- EFECTO TYPEWRITER ---
@@ -372,7 +348,6 @@ function initTypewriter() {
 
   function type() {
     const words = typewriterWords[currentLang] || typewriterWords['es'];
-    // Prevenir desborde del índice si cambia el array de palabras
     const currentWord = words[wordIndex % words.length];
     
     if (isDeleting) {
@@ -436,34 +411,53 @@ function initMetricsCounter() {
   }
 }
 
-// --- SIMULADOR DE OBJECIONES DE VENTAS ---
+// --- SIMULADOR DE OBJECIONES DE VENTAS (TIPO CHAT APP) ---
 function initObjectionSimulator() {
   const buttons = document.querySelectorAll('.btn-obj');
   const container = document.getElementById('sim-response-container');
+  const userTextElement = document.getElementById('sim-user-text');
   const textElement = document.getElementById('sim-response-text');
+  const marioBubble = document.getElementById('sim-mario-bubble-container');
 
-  if (!buttons.length || !textElement || !container) return;
+  if (!buttons.length || !textElement || !userTextElement || !container) return;
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       buttons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
 
-      container.style.opacity = '0';
-      container.style.transform = 'translateY(10px)';
+      // Animación de entrada de los globos de texto
+      container.style.opacity = '0.5';
+      container.style.transform = 'translateY(5px)';
+      marioBubble.style.opacity = '0';
+      marioBubble.style.transform = 'translateY(10px)';
       
       setTimeout(() => {
         activeObjection = btn.getAttribute('data-objection');
+        
+        // Poner la objeción en el globo del cliente
+        userTextElement.textContent = userObjections[currentLang][activeObjection];
+        
+        // Poner la respuesta en el globo de Mario
         textElement.textContent = simulatorResponses[currentLang][activeObjection];
+        
         container.style.transition = 'all 0.3s ease';
         container.style.opacity = '1';
         container.style.transform = 'translateY(0)';
+        
+        // Retraso para la respuesta de Mario simulando "escribiendo..."
+        setTimeout(() => {
+          marioBubble.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+          marioBubble.style.opacity = '1';
+          marioBubble.style.transform = 'translateY(0)';
+        }, 300);
+
       }, 150);
     });
   });
 }
 
-// --- GRÁFICO CANVAS DE TRADING (SOLO EQUITY CURVE) ---
+// --- GRÁFICO CANVAS DE TRADING (ESTILO DUB.CO / VERCEL) ---
 function initTradingChart() {
   const canvas = document.getElementById('trading-canvas');
   if (!canvas) return;
@@ -474,7 +468,6 @@ function initTradingChart() {
   let animationFrameId = null;
   let progress = 0;
 
-  // Datos reales de la curva de Equity ($200k Funded)
   const equityData = [
     200000, 201200, 200800, 203500, 202800, 206000, 
     205100, 209500, 208700, 214000, 212500, 218200, 
@@ -484,7 +477,7 @@ function initTradingChart() {
   function resizeCanvas() {
     const width = canvas.parentElement.clientWidth;
     canvas.width = width;
-    canvas.height = 300;
+    canvas.height = 250; // Algo más compacto para SaaS
     draw();
   }
 
@@ -501,22 +494,18 @@ function initTradingChart() {
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    const padding = 40;
+    const padding = 30;
     const chartWidth = canvas.width - padding * 2;
     const chartHeight = canvas.height - padding * 2;
 
-    // Cuadrícula de fondo
     drawGrid(padding, chartWidth, chartHeight);
-    
-    // Curva de capital
     drawEquityCurve(padding, chartWidth, chartHeight);
   }
 
   function drawGrid(padding, w, h) {
-    ctx.strokeStyle = 'rgba(212, 175, 55, 0.04)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.02)';
     ctx.lineWidth = 1;
     
-    // Líneas verticales
     const cols = 6;
     for (let i = 0; i <= cols; i++) {
       const x = padding + (w / cols) * i;
@@ -526,7 +515,6 @@ function initTradingChart() {
       ctx.stroke();
     }
 
-    // Líneas horizontales
     const rows = 4;
     for (let i = 0; i <= rows; i++) {
       const y = padding + (h / rows) * i;
@@ -553,9 +541,9 @@ function initTradingChart() {
       coords.push({ x, y, val });
     }
 
-    // Línea de oro principal
-    ctx.strokeStyle = '#d4af37';
-    ctx.lineWidth = 3;
+    // Línea azul eléctrica (SaaS style)
+    ctx.strokeStyle = '#3b82f6';
+    ctx.lineWidth = 2.5;
     ctx.lineCap = 'round';
     ctx.lineJoin = 'round';
     
@@ -566,11 +554,11 @@ function initTradingChart() {
     }
     ctx.stroke();
 
-    // Relleno sombreado degradado
+    // Relleno degradado azul semitransparente
     if (coords.length > 1) {
       const grad = ctx.createLinearGradient(0, padding, 0, padding + h);
-      grad.addColorStop(0, 'rgba(212, 175, 55, 0.18)');
-      grad.addColorStop(1, 'rgba(212, 175, 55, 0)');
+      grad.addColorStop(0, 'rgba(59, 130, 246, 0.12)');
+      grad.addColorStop(1, 'rgba(59, 130, 246, 0)');
       
       ctx.fillStyle = grad;
       ctx.beginPath();
@@ -583,20 +571,20 @@ function initTradingChart() {
       ctx.fill();
     }
 
-    // Punto final con brillo
+    // Punto del precio actual con sombra azul
     const last = coords[coords.length - 1];
-    ctx.shadowBlur = 10;
-    ctx.shadowColor = '#d4af37';
-    ctx.fillStyle = '#f5d77f';
+    ctx.shadowBlur = 8;
+    ctx.shadowColor = '#3b82f6';
+    ctx.fillStyle = '#60a5fa';
     ctx.beginPath();
-    ctx.arc(last.x, last.y, 5, 0, Math.PI * 2);
+    ctx.arc(last.x, last.y, 4, 0, Math.PI * 2);
     ctx.fill();
     
     ctx.shadowBlur = 0;
 
-    // Etiqueta de valor
-    ctx.fillStyle = '#fdfcfb';
-    ctx.font = 'bold 12px "Plus Jakarta Sans", sans-serif';
+    // Etiqueta de balance
+    ctx.fillStyle = '#fafafa';
+    ctx.font = 'bold 11px "Inter", sans-serif';
     ctx.textAlign = 'right';
     ctx.fillText(`$${last.val.toLocaleString()}`, last.x, last.y - 12);
   }
@@ -673,25 +661,25 @@ function initScrollReveal() {
   skillsCols.forEach((col) => observer.observe(col));
 }
 
-// --- AVATAR 3D TILT EFFECT ---
+// --- AVATAR TILT EFFECT ---
 function initAvatarTilt() {
   const wrapper = document.getElementById('avatar-interactive-wrapper');
   if (!wrapper) return;
 
-  const image = wrapper.querySelector('.avatar-img');
+  const card = wrapper.querySelector('.avatar-card');
 
   wrapper.addEventListener('mousemove', (e) => {
     const rect = wrapper.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
     
-    const rotX = (-y / rect.height) * 20;
-    const rotY = (x / rect.width) * 20;
+    const rotX = (-y / rect.height) * 15;
+    const rotY = (x / rect.width) * 15;
 
-    image.style.transform = `scale(1.05) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(10px)`;
+    card.style.transform = `translateY(-5px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
   });
 
   wrapper.addEventListener('mouseleave', () => {
-    image.style.transform = 'scale(1) rotateX(0) rotateY(0) translateZ(0)';
+    card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
   });
 }
