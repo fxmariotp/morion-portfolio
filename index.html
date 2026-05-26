@@ -24,15 +24,23 @@
       <div class="header-container">
         <a href="#" class="logo" id="nav-logo">MT.</a>
         <nav class="nav">
-          <a href="#about" class="nav-link" id="link-about">Sobre Mí</a>
-          <a href="#sales" class="nav-link" id="link-sales">Ventas</a>
-          <a href="#trading" class="nav-link" id="link-trading">Trading</a>
-          <a href="#skills" class="nav-link" id="link-skills">Habilidades</a>
-          <a href="#education" class="nav-link" id="link-education">Educación</a>
-          <a href="#contact" class="nav-link" id="link-contact">Contacto</a>
+          <a href="#about" class="nav-link" id="link-about" data-i18n="nav-about">Sobre Mí</a>
+          <a href="#sales" class="nav-link" id="link-sales" data-i18n="nav-sales">Ventas</a>
+          <a href="#trading" class="nav-link" id="link-trading" data-i18n="nav-trading">Trading</a>
+          <a href="#skills" class="nav-link" id="link-skills" data-i18n="nav-skills">Habilidades</a>
+          <a href="#education" class="nav-link" id="link-education" data-i18n="nav-education">Educación</a>
+          <a href="#contact" class="nav-link" id="link-contact" data-i18n="nav-contact">Contacto</a>
         </nav>
-        <div class="header-cta">
-          <a href="#contact" class="btn-gold-outline btn-sm" id="header-cta-btn">Negociar Ahora</a>
+        <div class="header-right">
+          <!-- Selector de Idioma -->
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="btn-lang-es">ES</button>
+            <span class="lang-divider">/</span>
+            <button class="lang-btn" id="btn-lang-en">EN</button>
+          </div>
+          <div class="header-cta">
+            <a href="#contact" class="btn-gold-outline btn-sm" id="header-cta-btn" data-i18n="nav-cta">Negociar Ahora</a>
+          </div>
         </div>
       </div>
     </header>
@@ -46,15 +54,15 @@
         </div>
         <div class="container hero-container">
           <div class="hero-content">
-            <span class="hero-badge">Disponible para nuevos desafíos</span>
+            <span class="hero-badge" data-i18n="hero-badge">Disponible para nuevos desafíos</span>
             <h1 class="hero-title" id="hero-main-title">Mario Tiburcio</h1>
             <h2 class="hero-subtitle"><span id="typewriter"></span><span class="cursor-type">&nbsp;</span></h2>
-            <p class="hero-pitch">
+            <p class="hero-pitch" data-i18n="hero-pitch">
               Apasionado por los mercados financieros y experto en el desarrollo de relaciones comerciales de alto valor. Conecto de forma instantánea a través de llamada en frío e implemento algoritmos cuantitativos con gestión de riesgo estricta.
             </p>
             <div class="hero-actions">
-              <a href="#sales" class="btn-gold" id="hero-btn-sales">Ver Trayectoria</a>
-              <a href="#contact" class="btn-text" id="hero-btn-contact">Contáctame <span class="arrow">→</span></a>
+              <a href="#sales" class="btn-gold" id="hero-btn-sales" data-i18n="hero-cta-view">Ver Trayectoria</a>
+              <a href="#contact" class="btn-text" id="hero-btn-contact"><span data-i18n="hero-cta-contact">Contáctame</span> <span class="arrow">→</span></a>
             </div>
           </div>
           <div class="hero-visual">
@@ -72,23 +80,23 @@
         <div class="container grid-4">
           <div class="metric-card scroll-reveal" id="metric-sales-years">
             <div class="metric-num-wrapper"><span class="metric-number" data-target="3">0</span><span class="metric-plus">+</span></div>
-            <p class="metric-label">Años en Ventas</p>
-            <span class="metric-desc">Especialidad en Cold Calling</span>
+            <p class="metric-label" data-i18n="metric-sales-label">Años en Ventas</p>
+            <span class="metric-desc" data-i18n="metric-sales-desc">Especialidad en Cold Calling</span>
           </div>
           <div class="metric-card scroll-reveal" id="metric-clients">
             <div class="metric-num-wrapper"><span class="metric-number" data-target="400">0</span><span class="metric-plus">+</span></div>
-            <p class="metric-label">Clientes Particulares</p>
-            <span class="metric-desc">Cartera activa y fidelizada</span>
+            <p class="metric-label" data-i18n="metric-clients-label">Clientes Particulares</p>
+            <span class="metric-desc" data-i18n="metric-clients-desc">Cartera activa y fidelizada</span>
           </div>
           <div class="metric-card scroll-reveal" id="metric-funding">
             <div class="metric-num-wrapper"><span class="metric-plus">$</span><span class="metric-number" data-target="200">0</span><span class="metric-plus">k</span></div>
-            <p class="metric-label">Cuentas de Fondeo</p>
-            <span class="metric-desc">Consistencia de más de 1 año</span>
+            <p class="metric-label" data-i18n="metric-funding-label">Cuentas de Fondeo</p>
+            <span class="metric-desc" data-i18n="metric-funding-desc">Consistencia de más de 1 año</span>
           </div>
           <div class="metric-card scroll-reveal" id="metric-winrate">
             <div class="metric-num-wrapper"><span class="metric-number" data-target="100">0</span><span class="metric-plus">%</span></div>
-            <p class="metric-label">Gestión de Riesgo</p>
-            <span class="metric-desc">Consistencia matemática estricta</span>
+            <p class="metric-label" data-i18n="metric-risk-label">Gestión de Riesgo</p>
+            <span class="metric-desc" data-i18n="metric-risk-desc">Consistencia matemática estricta</span>
           </div>
         </div>
       </section>
@@ -97,20 +105,20 @@
       <section id="sales" class="sales-section section-padding">
         <div class="container grid-2 align-center">
           <div class="sales-content scroll-reveal-left">
-            <span class="section-tag">Ventas de Alto Impacto</span>
-            <h2 class="section-title">El Arte de la Conversión Directa</h2>
-            <p class="section-description">
+            <span class="section-tag" data-i18n="sales-tag">Ventas de Alto Impacto</span>
+            <h2 class="section-title" data-i18n="sales-title">El Arte de la Conversión Directa</h2>
+            <p class="section-description" data-i18n="sales-description">
               La llamada en frío es el canal definitivo para generar negocios rápidos y de gran volumen. Con <strong>3 años de experiencia comercial</strong>, he dominado la oratoria comercial y el cierre directo, desarrollando estrategias que superan la barrera del "no" de inmediato.
             </p>
             <div class="experience-box">
               <h3 class="exp-title">Comercial | Renosur Energías SL</h3>
-              <span class="exp-date">Desde 2024 (2 años)</span>
-              <p class="exp-text">Generación de nuevas cuentas comerciales e incremento sostenido de la facturación en el sector energético, liderando la prospección telefónica activa.</p>
+              <span class="exp-date" data-i18n="sales-exp1-date">Desde hace 2 años</span>
+              <p class="exp-text" data-i18n="sales-exp1-text">Generación de nuevas cuentas comerciales e incremento sostenido de la facturación en el sector energético, liderando la prospección telefónica activa.</p>
             </div>
             <div class="experience-box">
-              <h3 class="exp-title">Gestor de Cuentas Particulares</h3>
-              <span class="exp-date">3 años de trayectoria acumulada</span>
-              <p class="exp-text">Captación y fidelización de una cartera de <strong>más de 400 clientes particulares</strong> a nivel nacional mediante venta telefónica y consultiva.</p>
+              <h3 class="exp-title" data-i18n="sales-exp2-title">Gestor de Cuentas Particulares</h3>
+              <span class="exp-date" data-i18n="sales-exp2-date">3 años de trayectoria acumulada</span>
+              <p class="exp-text" data-i18n="sales-exp2-text">Captación y fidelización de una cartera de <strong>más de 400 clientes particulares</strong> a nivel nacional mediante venta telefónica y consultiva.</p>
             </div>
           </div>
           
@@ -122,22 +130,22 @@
                 <div class="sim-title">Sales Objection Simulator v1.0</div>
               </div>
               <div class="simulator-body">
-                <p class="sim-instruction">Pon a prueba mis habilidades de Cold Calling. Selecciona la objeción del cliente:</p>
+                <p class="sim-instruction" data-i18n="sim-instruction">Pon a prueba mis habilidades de Cold Calling. Selecciona la objeción del cliente:</p>
                 <div class="obj-buttons">
-                  <button class="btn-obj" data-objection="no-tiempo" id="btn-obj-tiempo">"No tengo tiempo para esto ahora."</button>
-                  <button class="btn-obj" data-objection="ya-tengo" id="btn-obj-tengo">"Ya tengo contratado un servicio similar."</button>
-                  <button class="btn-obj" data-objection="es-caro" id="btn-obj-caro">"En este momento es un gasto muy alto."</button>
-                  <button class="btn-obj" data-objection="mandame-mail" id="btn-obj-mail">"Mándame un email y lo leo luego."</button>
+                  <button class="btn-obj" data-objection="no-tiempo" id="btn-obj-tiempo" data-i18n="sim-obj-1">"No tengo tiempo para esto ahora."</button>
+                  <button class="btn-obj" data-objection="ya-tengo" id="btn-obj-tengo" data-i18n="sim-obj-2">"Ya tengo contratado un servicio similar."</button>
+                  <button class="btn-obj" data-objection="es-caro" id="btn-obj-caro" data-i18n="sim-obj-3">"En este momento es un gasto muy alto."</button>
+                  <button class="btn-obj" data-objection="mandame-mail" id="btn-obj-mail" data-i18n="sim-obj-4">"Mándame un email y lo leo luego."</button>
                 </div>
                 <div class="sim-response-box" id="sim-response-container">
                   <div class="sim-character">
                     <div class="sim-avatar">MT</div>
                     <div>
                       <h4 class="sim-char-name">Mario Tiburcio</h4>
-                      <span class="sim-char-role">Cold Caller Specialist</span>
+                      <span class="sim-char-role" data-i18n="sim-role">Cold Caller Specialist</span>
                     </div>
                   </div>
-                  <div class="sim-message" id="sim-response-text">
+                  <div class="sim-message" id="sim-response-text" data-i18n="sim-response-placeholder">
                     Selecciona una objeción de arriba para ver cómo reabro la llamada de inmediato...
                   </div>
                 </div>
@@ -155,8 +163,7 @@
             <div class="chart-card">
               <div class="chart-header">
                 <div class="chart-tabs">
-                  <span class="tab active" id="tab-equity">Equity Curve ($200k Funded)</span>
-                  <span class="tab" id="tab-pinescript">Risk / Reward (1:3 Ratio)</span>
+                  <span class="tab active" id="tab-equity" data-i18n="chart-title">Evolución de Equity ($200k Fondeados)</span>
                 </div>
                 <div class="chart-status">
                   <span class="pulse-dot"></span> Live Sim
@@ -167,17 +174,17 @@
               </div>
               <div class="chart-footer">
                 <div class="chart-legend-item">
-                  <span class="dot-gold"></span> Cuenta Fondeada Consistente
+                  <span class="dot-gold"></span> <span data-i18n="chart-legend">Cuenta Fondeada Consistente</span>
                 </div>
-                <button class="btn-gold-outline btn-xs" id="btn-reset-chart">Simular Trade</button>
+                <button class="btn-gold-outline btn-xs" id="btn-reset-chart" data-i18n="chart-btn">Simular Historial</button>
               </div>
             </div>
           </div>
 
           <div class="trading-content scroll-reveal-right">
-            <span class="section-tag">Análisis Quant & Trading</span>
-            <h2 class="section-title">Algoritmos, Forex y Consistencia</h2>
-            <p class="section-description">
+            <span class="section-tag" data-i18n="trading-tag">Análisis Quant & Trading</span>
+            <h2 class="section-title" data-i18n="trading-title">Algoritmos, Forex y Consistencia</h2>
+            <p class="section-description" data-i18n="trading-description">
               En los mercados financieros, la gestión de riesgo lo es todo. Opero de manera híbrida (manual y automatizada con Python/PineScript) en los mercados de <strong>Forex y Criptomonedas</strong>. Mi enfoque cuantitativo me permite mantener la calma estadística bajo cualquier circunstancia de mercado.
             </p>
             
@@ -185,22 +192,22 @@
               <div class="feature-item">
                 <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
                 <div>
-                  <h4 class="feature-title">Consistencia de $200,000 USD</h4>
-                  <p class="feature-text">Gestión activa y exitosa de cuentas de fondeo institucionales de $200k con consistencia demostrada durante más de un año.</p>
+                  <h4 class="feature-title" data-i18n="trading-feat1-title">Consistencia de $200,000 USD</h4>
+                  <p class="feature-text" data-i18n="trading-feat1-text">Gestión activa y exitosa de cuentas de fondeo institucionales de $200k con consistencia demostrada durante más de un año.</p>
                 </div>
               </div>
               <div class="feature-item">
                 <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
                 <div>
-                  <h4 class="feature-title">Trading Algorítmico & Scripts</h4>
-                  <p class="feature-text">Desarrollo de estrategias automatizadas de intradía y swing en PineScript (TradingView) y bots de control en Python.</p>
+                  <h4 class="feature-title" data-i18n="trading-feat2-title">Trading Algorítmico & Scripts</h4>
+                  <p class="feature-text" data-i18n="trading-feat2-text">Desarrollo de estrategias automatizadas de intradía y swing en PineScript (TradingView) y bots de control en Python.</p>
                 </div>
               </div>
               <div class="feature-item">
                 <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
                 <div>
-                  <h4 class="feature-title">Gestión de Riesgo Rigurosa</h4>
-                  <p class="feature-text">Reglas inquebrantables de drawdown máximo diario e integral, buscando ratios riesgo/beneficio óptimos de 1:3 o superior.</p>
+                  <h4 class="feature-title" data-i18n="trading-feat3-title">Gestión de Riesgo Rigurosa</h4>
+                  <p class="feature-text" data-i18n="trading-feat3-text">Reglas inquebrantables de drawdown máximo diario e integral, adaptándome dinámicamente a las condiciones del mercado sin depender de ratios rígidos.</p>
                 </div>
               </div>
             </div>
@@ -212,38 +219,38 @@
       <section id="skills" class="skills-section section-padding">
         <div class="container">
           <div class="text-center">
-            <span class="section-tag">Habilidades Clave</span>
-            <h2 class="section-title">El Mix Comercial y Analítico</h2>
-            <p class="section-subtitle">Fusión estratégica de habilidades duras y blandas orientadas al rendimiento.</p>
+            <span class="section-tag" data-i18n="skills-tag">Habilidades Clave</span>
+            <h2 class="section-title" data-i18n="skills-title">El Mix Comercial y Analítico</h2>
+            <p class="section-subtitle" data-i18n="skills-subtitle">Fusión estratégica de habilidades duras y blandas orientadas al rendimiento.</p>
           </div>
           
           <div class="grid-2 mt-50">
             <!-- Ventas & Negociación -->
             <div class="skills-column scroll-reveal-left">
-              <h3 class="skills-col-title">Ventas & Negociación</h3>
+              <h3 class="skills-col-title" data-i18n="skills-col1-title">Ventas & Negociación</h3>
               <div class="skills-grid">
                 <div class="skill-card" id="skill-cierre">
-                  <h4 class="skill-name">Cierre de Ventas</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-cierre">Cierre de Ventas</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%"></div></div>
                   <span class="skill-percent">95%</span>
                 </div>
                 <div class="skill-card" id="skill-oratoria">
-                  <h4 class="skill-name">Oratoria & Comunicación</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-oratoria">Oratoria & Comunicación</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
                   <span class="skill-percent">90%</span>
                 </div>
                 <div class="skill-card" id="skill-contratos">
-                  <h4 class="skill-name">Negociación de Contratos</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-contratos">Negociación de Contratos</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
                   <span class="skill-percent">85%</span>
                 </div>
                 <div class="skill-card" id="skill-objeciones">
-                  <h4 class="skill-name">Manejo de Objeciones</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-objeciones">Manejo de Objeciones</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 95%"></div></div>
                   <span class="skill-percent">95%</span>
                 </div>
                 <div class="skill-card" id="skill-psicologia">
-                  <h4 class="skill-name">Psicología de Mercado/Cliente</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-psicologia">Psicología de Mercado/Cliente</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 92%"></div></div>
                   <span class="skill-percent">92%</span>
                 </div>
@@ -252,30 +259,30 @@
 
             <!-- Trading & Tecnología -->
             <div class="skills-column scroll-reveal-right">
-              <h3 class="skills-col-title">Trading & Tecnología</h3>
+              <h3 class="skills-col-title" data-i18n="skills-col2-title">Trading & Tecnología</h3>
               <div class="skills-grid">
                 <div class="skill-card" id="skill-tecnico">
-                  <h4 class="skill-name">Análisis Técnico y Macro</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-tecnico">Análisis Técnico y Macro</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 90%"></div></div>
                   <span class="skill-percent">90%</span>
                 </div>
                 <div class="skill-card" id="skill-riesgo">
-                  <h4 class="skill-name">Gestión de Riesgo (Risk Management)</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-riesgo">Gestión de Riesgo (Risk Management)</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 98%"></div></div>
                   <span class="skill-percent">98%</span>
                 </div>
                 <div class="skill-card" id="skill-python">
-                  <h4 class="skill-name">Python & PineScript</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-python">Python & PineScript</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
                   <span class="skill-percent">85%</span>
                 </div>
                 <div class="skill-card" id="skill-crm">
-                  <h4 class="skill-name">CRM (Salesforce, HubSpot)</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-crm">CRM (Salesforce, HubSpot)</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 80%"></div></div>
                   <span class="skill-percent">80%</span>
                 </div>
                 <div class="skill-card" id="skill-excel">
-                  <h4 class="skill-name">Excel Avanzado & Datos</h4>
+                  <h4 class="skill-name" data-i18n="skill-name-excel">Excel Avanzado & Datos</h4>
                   <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 88%"></div></div>
                   <span class="skill-percent">88%</span>
                 </div>
@@ -285,16 +292,16 @@
 
           <!-- Idiomas -->
           <div class="languages-box mt-40 scroll-reveal">
-            <h4 class="languages-title">Idiomas</h4>
+            <h4 class="languages-title" data-i18n="lang-box-title">Idiomas</h4>
             <div class="languages-flex">
               <div class="lang-item">
-                <span class="lang-name">Español</span>
-                <span class="lang-level">Nativo</span>
+                <span class="lang-name" data-i18n="lang-es-name">Español</span>
+                <span class="lang-level" data-i18n="lang-es-level">Nativo</span>
               </div>
               <div class="lang-separator">|</div>
               <div class="lang-item">
-                <span class="lang-name">Inglés</span>
-                <span class="lang-level">B2 (Conversación fluida)</span>
+                <span class="lang-name" data-i18n="lang-en-name">Inglés</span>
+                <span class="lang-level" data-i18n="lang-en-level">B2 (Conversación fluida)</span>
               </div>
             </div>
           </div>
@@ -305,27 +312,27 @@
       <section id="education" class="education-section section-padding">
         <div class="container">
           <div class="text-center">
-            <span class="section-tag">Formación</span>
-            <h2 class="section-title">Estudios & Logros Académicos</h2>
+            <span class="section-tag" data-i18n="edu-tag">Formación</span>
+            <h2 class="section-title" data-i18n="edu-title">Estudios & Logros Académicos</h2>
           </div>
           
           <div class="timeline mt-50">
             <div class="timeline-item scroll-reveal-left" id="edu-trw">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-badge">Especialización Financiera</span>
+                <span class="timeline-badge" data-i18n="edu-badge1">Especialización Financiera</span>
                 <h3 class="timeline-title">CryptoTrading Campus - TRW University</h3>
-                <h4 class="timeline-subtitle">HustlersUniversity | Nivel Brown Belt</h4>
-                <p class="timeline-desc">Estudios de nivel avanzado en análisis técnico, gestión de colateral y trading intradía con validación práctica y consistencia de mercado demostrada.</p>
+                <h4 class="timeline-subtitle" data-i18n="edu-sub1">HustlersUniversity | Nivel Brown Belt</h4>
+                <p class="timeline-desc" data-i18n="edu-desc1">Estudios de nivel avanzado en análisis técnico, gestión de colateral y trading intradía con validación práctica y consistencia de mercado demostrada.</p>
               </div>
             </div>
 
             <div class="timeline-item scroll-reveal-right" id="edu-bachillerato">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <span class="timeline-badge">Educación Secundaria</span>
-                <h3 class="timeline-title">Bachillerato Tecnológico</h3>
-                <p class="timeline-desc">Formación orientada a ciencias aplicadas, matemáticas avanzadas y fundamentos informáticos, base de mi perfil analítico-cuantitativo actual.</p>
+                <span class="timeline-badge" data-i18n="edu-badge2">Educación Secundaria</span>
+                <h3 class="timeline-title" data-i18n="edu-title2">Bachillerato Tecnológico</h3>
+                <p class="timeline-desc" data-i18n="edu-desc2">Formación orientada a ciencias aplicadas, matemáticas avanzadas y fundamentos informáticos, base de mi perfil analítico-cuantitativo actual.</p>
               </div>
             </div>
           </div>
@@ -336,9 +343,9 @@
       <section id="contact" class="contact-section section-padding">
         <div class="container grid-2">
           <div class="contact-info scroll-reveal-left">
-            <span class="section-tag">¿Hablamos?</span>
-            <h2 class="section-title">Establezcamos una Relación Comercial</h2>
-            <p class="contact-pitch">
+            <span class="section-tag" data-i18n="contact-tag">¿Hablamos?</span>
+            <h2 class="section-title" data-i18n="contact-title">Establezcamos una Relación Comercial</h2>
+            <p class="contact-pitch" data-i18n="contact-pitch">
               Tanto si buscas un cerrador de ventas telefónicas imparable como si quieres hablar sobre algoritmos de trading, sistemas de fondeo o gestión de capital, ponte en contacto conmigo.
             </p>
             
@@ -346,7 +353,7 @@
               <a href="mailto:mariotiburcioporras@gmail.com" class="contact-method-card" id="contact-mail-card">
                 <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></div>
                 <div>
-                  <h4 class="method-label">Email Directo</h4>
+                  <h4 class="method-label" data-i18n="contact-method1-label">Email Directo</h4>
                   <span class="method-val">mariotiburcioporras@gmail.com</span>
                 </div>
               </a>
@@ -354,7 +361,7 @@
               <a href="tel:+34639938134" class="contact-method-card" id="contact-phone-card">
                 <div class="method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
                 <div>
-                  <h4 class="method-label">Teléfono</h4>
+                  <h4 class="method-label" data-i18n="contact-method2-label">Teléfono</h4>
                   <span class="method-val">+34 639 93 81 34</span>
                 </div>
               </a>
@@ -371,24 +378,24 @@
 
           <!-- Formulario de Contacto -->
           <div class="contact-form-container scroll-reveal-right">
-            <form class="contact-form" id="portfolio-contact-form" onsubmit="event.preventDefault(); alert('Mensaje enviado con éxito. Mario se pondrá en contacto contigo a la brevedad.'); this.reset();">
+            <form class="contact-form" id="portfolio-contact-form">
               <div class="form-group">
-                <label for="form-name" class="form-label">Nombre Completo</label>
-                <input type="text" id="form-name" class="form-control" placeholder="Ej. John Doe" required />
+                <label for="form-name" class="form-label" data-i18n="form-label-name">Nombre Completo</label>
+                <input type="text" id="form-name" class="form-control" data-i18n-placeholder="form-placeholder-name" placeholder="Ej. John Doe" required />
               </div>
               <div class="form-group">
-                <label for="form-email" class="form-label">Email corporativo / particular</label>
-                <input type="email" id="form-email" class="form-control" placeholder="Ej. tu@empresa.com" required />
+                <label for="form-email" class="form-label" data-i18n="form-label-email">Email corporativo / particular</label>
+                <input type="email" id="form-email" class="form-control" data-i18n-placeholder="form-placeholder-email" placeholder="Ej. tu@empresa.com" required />
               </div>
               <div class="form-group">
-                <label for="form-subject" class="form-label">Asunto</label>
-                <input type="text" id="form-subject" class="form-control" placeholder="Ej. Oportunidad comercial / Trading" required />
+                <label for="form-subject" class="form-label" data-i18n="form-label-subject">Asunto</label>
+                <input type="text" id="form-subject" class="form-control" data-i18n-placeholder="form-placeholder-subject" placeholder="Ej. Oportunidad comercial / Trading" required />
               </div>
               <div class="form-group">
-                <label for="form-message" class="form-label">Mensaje</label>
-                <textarea id="form-message" class="form-control" rows="5" placeholder="Cuéntame brevemente tu proyecto o propuesta..." required></textarea>
+                <label for="form-message" class="form-label" data-i18n="form-label-msg">Mensaje</label>
+                <textarea id="form-message" class="form-control" rows="5" data-i18n-placeholder="form-placeholder-msg" placeholder="Cuéntame brevemente tu proyecto o propuesta..." required></textarea>
               </div>
-              <button type="submit" class="btn-gold w-100" id="form-submit-btn">Enviar Mensaje</button>
+              <button type="submit" class="btn-gold w-100" id="form-submit-btn" data-i18n="form-btn">Enviar Mensaje</button>
             </form>
           </div>
         </div>
@@ -398,7 +405,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container text-center">
-        <p class="footer-copy">&copy; 2026 Mario Tiburcio. Todos los derechos reservados. Diseñado bajo el estándar Gold & Minimalist.</p>
+        <p class="footer-copy" data-i18n="footer-copy">&copy; 2026 Mario Tiburcio. Todos los derechos reservados. Diseñado bajo el estándar Gold & Minimalist.</p>
       </div>
     </footer>
 

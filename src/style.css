@@ -322,6 +322,44 @@ h1, h2, h3, h4, .logo {
   width: 100%;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Selector de Idioma */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 2px 4px;
+  transition: var(--transition-fast);
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+}
+
+.lang-btn.active {
+  color: var(--gold-primary);
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
+}
+
+.lang-divider {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -754,22 +792,13 @@ h1, h2, h3, h4, .logo {
 
 .chart-tabs .tab {
   font-size: 0.8rem;
-  color: var(--text-muted);
-  font-weight: 600;
+  color: var(--gold-primary);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 0.3rem 0;
-  border-bottom: 2px solid transparent;
-  transition: var(--transition-fast);
-}
-
-.chart-tabs .tab:hover {
-  color: var(--text-primary);
-}
-
-.chart-tabs .tab.active {
-  color: var(--gold-primary);
-  border-color: var(--gold-primary);
+  border-bottom: 2px solid var(--gold-primary);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
 }
 
 .chart-status {
@@ -1352,7 +1381,7 @@ textarea.form-control {
   }
 
   .nav {
-    display: none; /* Podríamos agregar un menú hamburguesa, pero siendo una single-page limpia, es común simplificar o dejar scrolling libre */
+    display: none;
   }
 
   .hero-title {
